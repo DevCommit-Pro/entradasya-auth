@@ -1,0 +1,11 @@
+import { defineConfig } from 'vitest/config';
+
+export default defineConfig({
+  resolve: { tsconfigPaths: true },
+  test: {
+    globals: true,
+    env: { NODE_ENV: 'test', JWT_SECRET: 'test-only-auth-secret-with-at-least-32-bytes', JWT_EXPIRES_IN: '8h' },
+    root: './',
+    include: ['**/*.e2e-spec.ts'],
+  },
+});
