@@ -10,7 +10,7 @@ import {
   validateEnvironment,
   expiryMilliseconds,
 } from '../config/environment.js';
-
+// prueba de CI
 const secret = process.env.JWT_SECRET!;
 const verifier = new JwtVerifier({
   key: secret,
