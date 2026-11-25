@@ -4,7 +4,7 @@ import { AuthService } from './auth.service.js';
 @Controller('auth')
 export class AuthController {
   constructor(@Inject(AuthService) private readonly auth: AuthService) {}
-
+// prueba de ci
   @Post('register')
   register(@Body() body: unknown) {
     return this.auth.register(body);
